@@ -144,24 +144,21 @@
             letter-spacing: 0px !important;
             font-family: "Noto Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            overflow-x: auto;
         }
         table {
             margin: 0px;
             padding: 0px;
             border: none;
-            font-size: 18px;
+            font-size: 1em;
             vertical-align: baseline;
             border-collapse: collapse;
             border-spacing: 0px;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            overflow-x: auto;
-            text-wrap: nowrap;
-            display: block;
-            empty-cells: show;
-            max-width: 100%;
-            table-layout: fixed;
-            width: 95%; /* Changed to 95% */
+            width: 100%;
+            table-layout: auto;
             letter-spacing: 0px !important;
+            min-width: 600px; /* 테이블의 최소 너비 설정 */
         }
         td {
             box-sizing: border-box;
@@ -172,6 +169,7 @@
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             position: relative;
             letter-spacing: 0px !important;
+            white-space: nowrap; /* 줄바꿈 방지 */
         }
         .header-cell {
             background-color: rgb(0, 112, 192);
@@ -181,6 +179,17 @@
         }
         .data-cell {
             text-align: center;
+        }
+        /* 화면 크기에 따라 폰트 크기 조절 */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+            }
+        }
+        @media (max-width: 576px) {
+            table {
+                font-size: 0.7em;
+            }
         }
     </style>
 </head>
@@ -235,7 +244,81 @@
 <img src="https://raw.githubusercontent.com/borinet-dev/Maple/refs/heads/main/talk.jpg" editor_component="image_link" /><br>
 &nbsp;<strong><span style="font-size: 12px; color: rgb(255, 0, 0);">계정당 1일 1회 받을 수 있습니다.</span></strong>
 <br><br>
-<div class="tableWrapper" style="box-sizing: border-box; letter-spacing: 0px !important; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><table class="" style="margin: 0px; padding: 0px; border: none; font-size: 18px; vertical-align: baseline; border-collapse: collapse; border-spacing: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); overflow-x: auto; text-wrap: nowrap; display: block; empty-cells: show; max-width: 100%; table-layout: fixed; width: 1180px; color: rgba(0, 0, 0, 0.93); background-color: rgb(255, 255, 255);"><tbody style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;"><tr style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;"><td style="box-sizing: border-box; margin: 0px; padding: 4px 8px; border: 1px solid rgb(221, 221, 221); vertical-align: middle; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; background-color: rgb(0, 112, 192); letter-spacing: 0px !important;"><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;"><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;">아이템명</span></span></div></td><td style="box-sizing: border-box; margin: 0px; padding: 4px 8px; border: 1px solid rgb(221, 221, 221); vertical-align: middle; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; background-color: rgb(0, 112, 192); letter-spacing: 0px !important;"><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;"><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;">세부</span></span></div></td></tr><tr style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;"><td style="box-sizing: border-box; margin: 0px; padding: 4px 8px; border: 1px solid rgb(221, 221, 221); vertical-align: middle; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; letter-spacing: 0px !important;"><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;"><div class="fr-image" contenteditable="false" data-contents-json="{&quot;src&quot;:&quot;https://assets.playnccdn.com/static-conti/1728362547742.png&quot;,&quot;width&quot;:null,&quot;height&quot;:null}" data-contents-type="image" draggable="true" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 0; letter-spacing: 0px !important;"><div class="fe-image-inner" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; display: inline-block; width: max-content; letter-spacing: 0px !important;"><img src="https://assets.playnccdn.com/static-conti/1728362547742.png" alt="" class="fe-image" style="box-sizing: border-box; border-style: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); vertical-align: middle; cursor: pointer; min-width: auto; letter-spacing: 0px !important;" /></div></div></div><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); letter-spacing: 0px !important;">붉은 단풍 주문서</span></div></td><td style="box-sizing: border-box; margin: 0px; padding: 4px 8px; border: 1px solid rgb(221, 221, 221); vertical-align: middle; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; letter-spacing: 0px !important;"><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;">사용 시 30분 동안</div><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;">일반 공격/물리 스킬/마법 스킬 크리티컬 확률 5%,</div><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;">일반 공격/물리 스킬/마법 스킬 위력 10%,</div><div data-contents-type="text" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align: center; letter-spacing: 0px !important;">방어력/마법저항 10%<span style="letter-spacing: 0px;">&nbsp;증가 효과 적용</span></div></td></tr></tbody></table></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 미션 테이블</title>
+    <style>
+        .tableWrapper {
+            box-sizing: border-box;
+            letter-spacing: 0px !important;
+            font-family: "Noto Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            overflow-x: auto;
+        }
+        table {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            font-size: 1em;
+            vertical-align: baseline;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            width: 100%;
+            table-layout: auto;
+            letter-spacing: 0px !important;
+            min-width: 600px; /* 테이블의 최소 너비 설정 */
+        }
+        td {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 4px 8px;
+            border: 1px solid rgb(221, 221, 221);
+            vertical-align: middle;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            position: relative;
+            letter-spacing: 0px !important;
+            white-space: nowrap; /* 줄바꿈 방지 */
+        }
+        .header-cell {
+            background-color: rgb(0, 112, 192);
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            text-align: center;
+        }
+        .data-cell {
+            text-align: center;
+        }
+        /* 화면 크기에 따라 폰트 크기 조절 */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+            }
+        }
+        @media (max-width: 576px) {
+            table {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tableWrapper">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="header-cell">아이템명</td>
+                    <td class="header-cell">설명</td>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="data-cell"><img src="https://assets.playnccdn.com/static-conti/1728362547742.png" /><br /><b>붉은 단풍 주문서</b></td>
+                    <td class="data-cell"><b>사용 시 30분 동안<br>일반 공격/물리 스킬/마법 스킬 크리티컬 확률 5%,<br>일반 공격/물리 스킬/마법 스킬 위력 10%,<br>방어력/마법저항 10%&nbsp;증가 효과 적용</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
 
 </div>
    <!-- End -->
